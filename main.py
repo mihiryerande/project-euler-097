@@ -13,7 +13,10 @@
 #
 #     Find the last ten digits of this prime number.
 
-def int_to_ten_digits(n):
+from typing import List
+
+
+def int_to_ten_digits(n: int) -> List[int]:
     """
     Given an integer `n`,
       return the representation of [n](mod 10^10)
@@ -40,7 +43,7 @@ def int_to_ten_digits(n):
     return d
 
 
-def add_ten_digits(x, y):
+def add_ten_digits(x: List[int], y: List[int]) -> List[int]:
     """
     Given two numbers `x` and `y` in mod 10^10,
       represented as lists of their reversed 10 digits,
@@ -67,7 +70,7 @@ def add_ten_digits(x, y):
     return z
 
 
-def multiply_ten_digits_single(x, d):
+def multiply_ten_digits_single(x: List[int], d: int) -> List[int]:
     """
     Given a number `x` in mod 10^10,
       represented as a list of its reversed 10 digits,
@@ -99,7 +102,7 @@ def multiply_ten_digits_single(x, d):
         return z
 
 
-def multiply_ten_digits(x, y):
+def multiply_ten_digits(x: List[int], y: List[int]) -> List[int]:
     """
     Given two numbers `x` and `y` in mod 10^10,
       represented as lists of their reversed 10 digits,
@@ -126,7 +129,7 @@ def multiply_ten_digits(x, y):
     return z
 
 
-def main():
+def main() -> int:
     """
     Returns the last ten digits of the
       large non-Mersenne prime: 28433 × 2^7830457 + 1
